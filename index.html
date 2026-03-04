@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creator Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <canvas id="particles"></canvas>
+    
+    <!-- 导航 -->
+    <nav class="nav">
+        <div class="logo">AI<span>.Creator</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#works">作品</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="avatar-container">
+                <div class="avatar-ring"></div>
+                <div class="avatar">
+                    <span class="avatar-emoji">🤖</span>
+                </div>
+            </div>
+            <h1 class="glitch" data-text="AI CREATOR">AI CREATOR</h1>
+            <p class="subtitle">探索人工智能的无限可能</p>
+            <p class="description">专注于 AI 艺术创作、智能应用开发与技术创新</p>
+            <a href="#works" class="cta-btn">
+                <span>查看作品</span>
+                <div class="btn-glow"></div>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>向下滚动</span>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="works" class="works">
+        <h2 class="section-title">
+            <span class="title-decoration">[</span>
+            AI 作品集
+            <span class="title-decoration">]</span>
+        </h2>
+        <div class="works-grid">
+            <div class="work-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">🎨</div>
+                <h3>AI 艺术生成器</h3>
+                <p>基于 Stable Diffusion 的艺术创作工具，支持多种风格转换</p>
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>Diffusers</span>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">💬</div>
+                <h3>智能对话助手</h3>
+                <p>多模态 AI 助手，支持文本、图像、语音交互</p>
+                <div class="tech-tags">
+                    <span>GPT-4</span>
+                    <span>Whisper</span>
+                    <span>DALL-E</span>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">🎵</div>
+                <h3>AI 音乐创作</h3>
+                <p>使用深度学习生成原创音乐，支持多种乐器风格</p>
+                <div class="tech-tags">
+                    <span>MusicGen</span>
+                    <span>Transformers</span>
+                    <span>Audio</span>
+                </div>
+            </div>
+            <div class="work-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">📹</div>
+                <h3>视频智能剪辑</h3>
+                <p>AI 驱动的视频编辑工具，自动识别精彩片段</p>
+                <div class="tech-tags">
+                    <span>OpenCV</span>
+                    <span>FFmpeg</span>
+                    <span>ML</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">
+            <span class="title-decoration">[</span>
+            技术栈
+            <span class="title-decoration">]</span>
+        </h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>AI/ML</h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-level="95">
+                        <span class="skill-name">PyTorch</span>
+                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="90">
+                        <span class="skill-name">TensorFlow</span>
+                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="85">
+                        <span class="skill-name">Transformers</span>
+                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>开发</h3>
+                <div class="skill-items">
+                    <div class="skill-item" data-level="92">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="88">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="80">
+                        <span class="skill-name">TypeScript</span>
+                        <div class="skill-bar"><div class="skill-progress"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">
+            <span class="title-decoration">[</span>
+            联系我
+            <span class="title-decoration">]</span>
+        </h2>
+        <div class="contact-content">
+            <p class="contact-text">有项目想法或合作意向？欢迎联系！</p>
+            <div class="contact-links">
+                <a href="mailto:hello@example.com" class="contact-link">
+                    <span class="link-icon">📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="#" class="contact-link">
+                    <span class="link-icon">🐙</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="contact-link">
+                    <span class="link-icon">🐦</span>
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2026 AI Creator. All rights reserved.</p>
+        <p class="footer-emoji">🦞 Built with passion</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
