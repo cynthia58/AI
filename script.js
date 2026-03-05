@@ -201,3 +201,31 @@ function copyEmail(element, email) {
         }, 2000);
     });
 }
+
+// 复制小红书号功能
+function copyXHS(element, xhsId) {
+    navigator.clipboard.writeText(xhsId).then(() => {
+        const linkText = element.querySelector('.link-text');
+        linkText.textContent = '小红书号' + xhsId + '已复制';
+        element.style.color = '#ff2442';
+
+        setTimeout(() => {
+            linkText.textContent = '小红书';
+            element.style.color = '';
+        }, 2000);
+    }).catch(() => {
+        // 降级方案
+        const textarea = document.createElement('textarea');
+        textarea.value = xhsId;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        const linkText = element.querySelector('.link-text');
+        linkText.textContent = '小红书号' + xhsId + '已复制';
+        setTimeout(() => {
+            linkText.textContent = '小红书';
+        }, 2000);
+    });
+}
