@@ -171,3 +171,33 @@ document.addEventListener('mousemove', (e) => {
 });
 
 console.log('🦞 AI Portfolio loaded successfully!');
+
+// 复制邮箱功能
+function copyEmail(element, email) {
+    navigator.clipboard.writeText(email).then(() => {
+        const linkText = element.querySelector('.link-text');
+        const originalText = linkText.textContent;
+        linkText.textContent = '已复制!';
+        element.style.color = '#00f5ff';
+
+        setTimeout(() => {
+            linkText.textContent = originalText;
+            element.style.color = '';
+        }, 2000);
+    }).catch(() => {
+        // 降级方案
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        const linkText = element.querySelector('.link-text');
+        const originalText = linkText.textContent;
+        linkText.textContent = '已复制!';
+        setTimeout(() => {
+            linkText.textContent = originalText;
+        }, 2000);
+    });
+}
