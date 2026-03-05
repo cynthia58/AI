@@ -177,7 +177,7 @@ function copyEmail(element, email) {
     navigator.clipboard.writeText(email).then(() => {
         const linkText = element.querySelector('.link-text');
         const originalText = linkText.textContent;
-        linkText.textContent = '已复制到剪贴板';
+        linkText.textContent = 'Email地址已复制！';
         element.style.color = '#00f5ff';
 
         setTimeout(() => {
@@ -195,7 +195,7 @@ function copyEmail(element, email) {
 
         const linkText = element.querySelector('.link-text');
         const originalText = linkText.textContent;
-        linkText.textContent = '已复制到剪贴板';
+        linkText.textContent = 'Email地址已复制！';
         setTimeout(() => {
             linkText.textContent = originalText;
         }, 2000);
