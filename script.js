@@ -206,7 +206,7 @@ function copyEmail(element, email) {
 function copyXHS(element, xhsId) {
     navigator.clipboard.writeText(xhsId).then(() => {
         const linkText = element.querySelector('.link-text');
-        linkText.textContent = '已复制到剪贴板';
+        linkText.textContent = '小红书号已复制！';
         element.style.color = '#ff2442';
 
         setTimeout(() => {
@@ -223,7 +223,7 @@ function copyXHS(element, xhsId) {
         document.body.removeChild(textarea);
 
         const linkText = element.querySelector('.link-text');
-        linkText.textContent = '已复制到剪贴板';
+        linkText.textContent = '小红书号已复制！';
         setTimeout(() => {
             linkText.textContent = '小红书';
         }, 2000);
